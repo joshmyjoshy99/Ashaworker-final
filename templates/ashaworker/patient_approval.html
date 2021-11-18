@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-ashaworker</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="">
+              <a class="" href="#"><img src="{% static 'assets/img/download.jpg' %}" class="img-responsive" style="width: 140px; margin-top: 16px;margin-left: -160px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar" style="margin-top: -70px;;">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="/ashaworker">Home</a></li>
+                <li class="active"><a href="patient_app">User - Approval</a></li>
+                <li class="dropdown"><a href=""></a></li>
+                <li class=""><a href="">Notifications</a></li>
+                <li class=""><a href="feedback_to_admin">Feedback</a></li>
+                <li class=""><a href="profile">PROFILE</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info"><br><br><br><br><br>
+              <table class="table table-bordered" style="color:white;background-color:white;">
+                  {% for pat in new_patient  %}
+                  <tr><th class="info" style="color:black;">Patient Name</th><td style="color:black;">{{ pat.user.first_name}}</td></tr>
+                  <tr><th class="info" style="color:black;">Image</th><td><img src="{{ pat.image.url }}" style="width: 115px; height: 115px;"></td></tr>
+                  <tr><th class="info" style="color:black;">Email</th><td style="color:black;">{{ pat.user.email}}</td></tr>
+                  <tr><th class="info" style="color:black;">Contact</th><td style="color:black;">{{ pat.contact}}</td></tr>
+                  <tr><th class="info" style="color:black;">DOB</th><td style="color:black;">{{ pat.dob}}</td></tr>
+                  <tr><th class="info" style="color:black;">Adhar No</th><td style="color:black;">{{ pat.adharno}}</td></tr>
+                  <tr><th class="info" style="color:black;">Ward No</th><td style="color:black;">{{ pat.wardno}}</td></tr>
+                  <tr><th class="info" style="color:black;">Panchayath</th><td style="color:black;">{{ pat.panchayath}}</td></tr>
+                  <tr><th class="info" style="color:black;">Street</th><td style="color:black;">{{ pat.street}}</td></tr>
+                  <tr><th class="info" style="color:black;">City</th><td style="color:black;">{{ pat.city}}</td></tr>
+                  <tr><th class="info" style="color:black;">Status</th><td style="color:black;">{{ pat.status}}</td></tr>
+                  <tr><th class="info" style="color:black;">Father/Husband Name</th><td style="color:black;">{{ pat.fahusname}}</td></tr>
+                  <tr><th class="info" style="color:black;">Father/Husband Contact</th><td style="color:black;">{{ pat.fahusno}}</td></tr>
+                  <tr><th class="info" style="color:black;">No of Children</th><td style="color:black;">{{ pat.noofchild}}</td></tr>
+                  <tr><th class="info" style="color:black;">Details</th><td><a href="approve?id={{ pat.user_id}}" class=" btn btn-success">Approve</a></td></tr>
+                  <tr><th class="info" style="color:black;">Reject</th><td><a href="reject?id={{ pat.user_id}}" class=" btn btn-danger">Reject</a></td></tr>
+                  <tr><th><tr></tr></th></tr>
+                  <tr><th><tr></tr></th></tr>
+                  <tr><th><tr></tr></th></tr><br><br>
+
+                  {% endfor %}
+              </table>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+
+    </div>
+    <div class="footer-line">
+
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+<!--  <script src="{% static 'assets/contactform/contactform.js"></script>-->
+
+</body>
+
+</html>

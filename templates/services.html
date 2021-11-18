@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'assets/css/services.css' %}" />
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet"  href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+</head>
+<body style="background-color: floralwhite;">
+<div class="service-nav" style="background-color: cadetblue;">
+        <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="">
+              <a class="" href="#"><img src="{% static 'assets/img/asha kiran.png' %}" class="img-responsive" style="width: 140px; height:80px; margin-top: 0px;margin-left: -160px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar" style="margin-top: -70px;;">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/" style="background-color:darkcyan">Home</a></li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+      <!-- Container for the image gallery -->
+<div class="container">
+  <h2 class="service-heading">Our Services</h2><br>
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 18</div>
+      <img src="{% static 'assets/img/pregnant.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 18</div>
+      <img src="{% static 'assets/img/pregnant2.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 18</div>
+      <img src="{% static 'assets/img/pregnant3.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 18</div>
+      <img src="{% static 'assets/img/pregnant4.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 18</div>
+      <img src="{% static 'assets/img/pregnant5.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 18</div>
+      <img src="{% static 'assets/img/pregnant.jpeg' %}" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">7 / 18</div>
+      <img src="{% static 'assets/img/asha-parents.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 18</div>
+      <img src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 18</div>
+      <img src="{% static 'assets/img/asha-home2.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 18</div>
+      <img src="{% static 'assets/img/asha-home3.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11 / 18</div>
+      <img src="{% static 'assets/img/asha-baby.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">12 / 18</div>
+      <img src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">13 / 18</div>
+      <img src="{% static 'assets/img/asha-parents.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">14 / 18</div>
+      <img src="{% static 'assets/img/asha-home.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">15 / 18</div>
+      <img src="{% static 'assets/img/asha-home2.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">16 / 18</div>
+      <img src="{% static 'assets/img/asha-home3.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">17 / 18</div>
+      <img src="{% static 'assets/img/asha-baby.jpeg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">18 / 18</div>
+      <img src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <br>
+  <h4 style="text-align:center;color:black;">Services for Pregnant Women</h4><br>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant.jpeg' %}" style="width:100%;height: 140px;" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant2.jpeg' %}" style="width:100%;height: 140px;margin-left:10px;" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant3.jpeg' %}" style="width:100%;height: 140px;margin-left:20px;" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant4.jpeg' %}" style="width:100%;height: 140px;margin-left:30px;" onclick="currentSlide(4)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant5.jpeg' %}" style="width:100%;height: 140px;margin-left:40px;" onclick="currentSlide(5)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/pregnant.jpeg' %}" style="width:100%;height: 140px;margin-left:50px;" onclick="currentSlide(6)" alt="">
+    </div>
+  </div><br>
+  <h4 style="text-align:center;color:black;">Services for Babies</h4><br>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-parents.jpeg' %}" style="width:100%;height: 140px;" onclick="currentSlide(7)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%;height: 140px;margin-left:10px;" onclick="currentSlide(8)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-home2.jpeg' %}" style="width:100%;height: 140px;margin-left:20px;" onclick="currentSlide(9)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-home3.jpeg' %}" style="width:100%;height: 140px;margin-left:30px;" onclick="currentSlide(10)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-baby.jpeg' %}" style="width:100%;height: 140px;margin-left:40px;" onclick="currentSlide(11)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%;height: 140px;margin-left:50px;" onclick="currentSlide(12)" alt="">
+    </div>
+  </div><br>
+  <h4 style="text-align:center;color:black;">Services for all User</h4><br>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-parents.jpeg' %}" style="width:100%;height: 140px;" onclick="currentSlide(13)" alt="With parents">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-home.jpeg' %}" style="width:100%;height: 140px;margin-left:10px;" onclick="currentSlide(14)" alt="@ home">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-home2.jpeg' %}" style="width:100%;height: 140px;margin-left:20px;" onclick="currentSlide(15)" alt="@ home">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-home3.jpeg' %}" style="width:100%;height: 140px;margin-left:30px;" onclick="currentSlide(16)" alt="@ home">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-baby.jpeg' %}" style="width:100%;height: 140px;margin-left:40px;" onclick="currentSlide(17)" alt="With baby">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'assets/img/asha-baby2.jpeg' %}" style="width:100%;height: 140px;margin-left:50px;" onclick="currentSlide(18)" alt="With baby">
+    </div>
+  </div><br><br>
+</div>
+
+<script src="{% static 'assets/js/services.js' %}"></script>
+</body>
+</html>

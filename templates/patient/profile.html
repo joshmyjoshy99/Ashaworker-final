@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-ashaworker</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner2">
+    <div class="bg-color" >
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="">
+              <a class="" href="#"><img src="{% static 'assets/img/download.jpg' %}" class="img-responsive" style="width: 140px; margin-top: 16px;margin-left: -160px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar" style="margin-top: -70px;;">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="/patient">Home</a></li>
+                <li class=""><a href="">Notification</a></li>
+                <li class="dropdown"><a href="feedback_from_patient">Feedback</a></li>
+                <li class="dropdown"><a href="ask_to_doctor">Ask to Doctor</a></li>
+                <li class=""><a href="add_details">Add Details</a></li>
+                <li class="active"><a href="profile">PROFILE</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row"><br><br>
+
+          <div class="banner-info" style="margin-top:50px;">
+              <h2 style="color:white;margin-left:400px;">Update your Profile</h2><br><br><br>
+            <div class="input-icons">
+              <p><label style="color:#795fff">Name : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>{{ patients.user.first_name }}</label></p>
+              <p><label style="color:#795fff">Email : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>{{ patients.user.email }}</label></p>
+              <p><label style="color:#795fff">Wardno : &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label><label>{{ patients.wardno }}</label></p>
+              <p><label style="color:#795fff">Panchayath : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label><label>{{ patients.panchayath }}</label></p>
+              <p><label style="color:#795fff">Street :&nbsp;  &nbsp; &nbsp; &nbsp; &emsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label><label>{{ patients.street }}</label></p>
+              <p><label style="color:#795fff">City : &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>{{ patients.city }}</label></p>
+              <p><label style="color:#795fff">DOB : &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&emsp;</label><label>{{ patients.dob }}</label></p>
+              <p><label style="color:#795fff">Contact : &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>{{ patients.contact }}</label></p>
+              <p><label style="color:#795fff">Adharno :&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label><label>{{ patients.adharno }}</label></p>
+              <p><label style="color:#795fff">Address : &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label><label>{{ patients.address }}</label></p>
+              <p><label style="color:#795fff">Image : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</label><label>{{ patients.image }}</label></p>
+              <p><label style="color:#795fff">Father/Husband Name :&nbsp; &nbsp;</label><label>{{ patients.fahusname }}</label></p>
+              <p><label style="color:#795fff">Father/Husband No :&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label><label>{{ patients.fahusno }}</label></p>
+              <p><label style="color:#795fff">No of Child :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>{{ patients.noofchild }}</label></p>
+              <p><label style="color:#795fff">Age :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>{{ patients.age }}</label></p>
+              <p><label style="color:#795fff">Job :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>{{ patients.job }}</label></p>
+              <p><label style="color:#795fff">Medicines :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label>{{ patients.medicines }}</label></p>
+
+            </div>
+
+          </div><br><br>
+          <h2 class="" style="text-align:center;color:white;">Update My Account</h2><br><br><br>
+          <div class="">
+            <form method="POST" action="" enctype="multipart/form-data" style="margin-left:330px;">
+                {% csrf_token %}
+                <input class="input-field" type="text" name="contact" placeholder="{{ patients.contact }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="wardno" placeholder="{{ patients.wardno }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="panchayath" placeholder="{{ patients.panchayath }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="street" placeholder="{{ patients.street }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="city" placeholder="{{ patients.city }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="file" name="image" placeholder="{{ patients.image }}" style="text-align:center;color:black;background-color:white;"><br><br>
+                <input class="input-field" type="text" name="address" placeholder="{{ patients.address }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="noofchild" placeholder="{{ patients.noofchild }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="age" placeholder="{{ patients.age }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="job" placeholder="{{ patients.job }}" style="text-align:center;color:black;"><br><br>
+                <input class="input-field" type="text" name="medicines" placeholder="{{ patients.medicines }}" style="text-align:center;color:black;"><br><br>
+
+                <input class="input-field" type="submit" name="profile" value="profile" style="width: 120px;height: 40px;color:black;"><br><br>
+
+              </form>
+          </div>
+
+          <div class="">
+            <form method="POST" action="" enctype="multipart/form-data" style="margin-left:330px;">
+                {% csrf_token %}
+                <label style="color:white;">Change Username</label>
+                <input class="input-field" type="text" name="username" placeholder="{{ patients.user.username }}" style="text-align:center;color:black;margin-left:30px;"><br><br>
+                <label style="color:white;">Change Password</label>
+                <input class="input-field" type="text" name="password" placeholder="{{ patients.user.password }}" style="text-align:center;color:black;margin-left:35px;"><br><br>
+
+                <input class="input-field" type="submit" name="profile" value="profile" style="width: 120px;height: 40px;color:black;"><br><br>
+
+              </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+
+    </div>
+    <div class="footer-line">
+
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+<!--  <script src="{% static 'assets/contactform/contactform.js"></script>-->
+
+</body>
+
+</html>
