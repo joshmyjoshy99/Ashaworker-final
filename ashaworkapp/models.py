@@ -21,6 +21,7 @@ class PatientEntry(models.Model):
     fahusno = models.CharField(max_length=200)
     noofchild = models.CharField(max_length=200)
     status = models.CharField(max_length=200)
+    relation = models.CharField(max_length=200, default='0')
     image = models.ImageField(upload_to='images/', null=True)
     address = models.CharField(max_length=1000, default='0')
     wedding = models.DateField(default='2021-10-11')
