@@ -32,10 +32,17 @@
                 <li class="active"><a href="/">Home</a></li>
 <!--                <li class="dropdown"><a href="patient_app">User - Approval</a></li>-->
                 <li class="" style="margin-left:10px;"><div class="dropdown">
-                  <button class="dropbtn">Approval</button>
+                  <button class="dropbtn">APPROVAL</button>
                   <div class="dropdown-content">
                     <a href="patient_app">User</a>
                     <a href="child_app">Child</a>
+                  </div>
+                </div></li>
+                <li class="" style="margin-left:10px;"><div class="dropdown">
+                  <button class="dropbtn">VIEW</button>
+                  <div class="dropdown-content">
+                    <a href="patient_view">User</a>
+                    <a href="child_view">Child</a>
                   </div>
                 </div></li>
                 <li class="dropdown"><a href=""></a></li>
@@ -43,6 +50,10 @@
                 <li class=""><a href="feedback_to_admin">Feedback</a></li>
                 <li class=""><a href="profile">PROFILE</a></li>
                 <li class=""><a href="logout/">Logout</a></li>
+                <li><form class="example" action="" style="margin:auto;max-width:300px">
+                  <input type="text" style="color:#000;" placeholder="Search.." name="search2">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form></li>
               </ul>
             </div>
           </div>
@@ -50,7 +61,7 @@
       </nav>
       <div class="container">
         <div class="row">
-          <div class="banner-info">
+          <div class="banner-info" style="margin-top:80px;">
             <!-- <div class="banner-logo text-center">
               <img src="img/logo.png" class="img-responsive">
             </div> -->
@@ -59,10 +70,10 @@
               <h2 class="white" style="margin-top: 20px;font-style: normal;color: lightgrey;">Welcome {{ user.username }}</h2>
               <!-- <a href="#contact" class="btn btn-appoint">Make an Appointment.</a> -->
             </div>
-            <div class="row" style="width:200px;margin-left:450px;margin-top:70px;">
-              <button type="button" style="height:40px;width:160px;border-radius:20px;"><a href="patient_view" style="color:black;"> User_View </a></button><br>
-              <button type="button" style="margin-top:20px;height:40px;width:160px;border-radius:20px;"><a href="child_view" style="color:black;"> Child_View </a></button>
-            </div>
+<!--            <div class="row" style="width:200px;margin-left:450px;margin-top:70px;">-->
+<!--              <button type="button" style="height:40px;width:160px;border-radius:20px;"><a href="patient_view" style="color:black;"> User_View </a></button><br>-->
+<!--              <button type="button" style="margin-top:20px;height:40px;width:160px;border-radius:20px;"><a href="child_view" style="color:black;"> Child_View </a></button>-->
+<!--            </div>-->
 
 
           </div>
