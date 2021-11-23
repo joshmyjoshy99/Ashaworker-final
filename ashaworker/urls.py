@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from ashaworkapp import admin_urls, doctor_urls, patient_urls, ashaworker_urls
-from ashaworkapp.views import Index_View, Patient_Reg, Doctor_Reg, Ashaworker_Reg, LoginView, Services, Forgot
+from ashaworkapp.views import Index_View, Patient_Reg, Doctor_Reg, Ashaworker_Reg, LoginView, Services, \
+    Forgotpassword
 from ashaworker import settings
 
 urlpatterns = [
@@ -28,7 +29,7 @@ urlpatterns = [
     path('ashaworker_reg', Ashaworker_Reg.as_view()),
     path('login', LoginView.as_view()),
     path('services', Services.as_view()),
-    path('forgot', Forgot.as_view()),
+    path('forgot', Forgotpassword.as_view()),
     # path('admin/', admin.site.urls),
     path('doctor/', doctor_urls.urls()),
     path('patient/', patient_urls.urls()),
@@ -41,3 +42,5 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
